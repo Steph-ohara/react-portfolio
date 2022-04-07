@@ -1,0 +1,13 @@
+import React from 'react'
+import {NavLink} from 'react-router-dom';
+
+export default function Nav(props) {
+  return (
+    <div className='row navigation' id='navigation'>
+        <NavLink to="/about">About </NavLink>
+        <NavLink to="/portfolio">Portfolio </NavLink>
+        <NavLink to="/contact">Contact </NavLink>
+        <NavLink to="/resume">Resume </NavLink>
+    </div>
+  );
+}
