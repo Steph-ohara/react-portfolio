@@ -37,8 +37,6 @@ function index() {
           <HStack w="75%" justify="center">
             <Scheduler />
             <Spacer />
-            <Horiseon />
-            <Spacer />
             <Gamecentral />
           </HStack>
         </Box>
