@@ -1,65 +1,61 @@
-import React, {useState} from 'react';
-import { validateEmail } from '../../utils/helper';
+import {
+  Container,
+  Flex,
+  Box,
+  Heading,
+  Text,
+  IconButton,
+  VStack,
+  HStack,
+  Wrap,
+  WrapItem,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  Textarea,
+} from "@chakra-ui/react";
+import {
+  MdPhone,
+  MdEmail,
+  MdLocationOn,
+  MdLinkdIn,
+  MdOutlineEmail,
+} from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa";
+import { BsGithub, BsDiscord, BsPerson } from "react-icons/bs";
+import { Button, ButtonGroup } from "@chakra-ui/react";
 
-export default function ContactForm() {
-    const [formState, setFormState] = useState({ name: '', email: '', message: '' });
+import {
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+} from "@chakra-ui/react";
 
-    const [ errorMessage, setErrorMessage] = useState('');
-    
-    const { name, email, message } = formState;
+export default function contact() {
+  return (
+    <Flex>
+      <VStack w="100%" mr={3} justify="center" p={3}>
+        <Heading>Contact</Heading>
+        <FormControl isRequired w="75%">
+          <FormLabel htmlFor="name">Name</FormLabel>
+          <Input id="name" placeholder="Name" />
+        </FormControl>
 
-    function handleChange(e) {
-        if (e.target.name === 'email') {
-            const isValid = validateEmail(e.target.value);
+        <FormControl isRequired w="75%">
+          <FormLabel htmlFor="email">Email address</FormLabel>
+          <Input id="email" type="email" placeholder="Email Address" />
+        </FormControl>
 
-                if(!isValid) {
-                    setErrorMessage('please enter a valid email');
-                } else {
-                    setErrorMessage('');
-                }
-        }
+        <FormControl isRequired w="75%">
+          <FormLabel htmlFor="message">Message</FormLabel>
+          <Input id="message" type="text" placeholder="Message" size="lg" />
+        </FormControl>
 
-        if (!errorMessage) {
-            setFormState({...formState, [e.target.name]: e.target.value})
-        }
-    }
-
-    function handleSubmit(e) {
-        e.preventDefault();
-    }
-
-return (
-    <section class='justify-content-center' id='contact-section'>
-        <h1 data-testid='h1tag' className='contact'> Contact: Stephanie O'Hara</h1>
-
-        <hr></hr>
-
-        <form class='justify-content-center' id='contact-form'>
-            <div>
-                <label htmlFor='name'>Name:</label>
-                <input class='form-control' type='text' name='name' defaultValue={name} onBlur={handleChange}/>    
-            </div>
-
-            <div>
-                <label htmlFor='email'>Email:</label>
-                <input class='form-control' type='email' name='email' defaultValue={email} onBlur={handleChange}/>    
-            </div>    
-
-            <div>
-                <label htmlFor='message'>Message:</label>
-                <textarea class='form-control' name='message' defaultValue={message} onBlur={handleChange} rows='6'/>
-            </div>
-
-            {errorMessage && (
-                <div>
-                    <p className='error-text'>{errorMessage}</p>
-                </div>
-            )}
-
-            <div>
-                <button dataTestid='button' class='btn btn-outline-dark mt-4' type='submit' onSubmit={handleSubmit}>Submit</button>
-            </div>
-        </form>   
-    </section>
+        <Button colorScheme="teal" variant="outline">
+          Submit
+        </Button>
+      </VStack>
+    </Flex>
   );
 }
