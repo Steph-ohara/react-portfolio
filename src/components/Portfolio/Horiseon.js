@@ -9,16 +9,15 @@ import {
     Stack,
     Image,
   } from "@chakra-ui/react";
-
   import { FaGithub } from 'react-icons/fa';
 
   
   const IMAGE =
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAfWfFeIP8dEHdG_o-nfQNaN8i76zMRw-q0g&usqp=CAU";
+    "https://user-images.githubusercontent.com/16748389/85058961-de2a7780-b170-11ea-9607-506f1524d142.jpeg";
   
   export default function ProductSimple() {
     return (
-      <Link href="https://steph-ohara.github.io/run-buddy/" >
+      <Link href="https://steph-ohara.github.io/Horiseon/" >
       <Flex py={12}>
         <Box
           position={"relative"}
@@ -65,10 +64,10 @@ import {
           </Box>
           <Stack pt={10} align={"center"}>
             <Heading fontSize={"2xl"} fontFamily={"body"} fontWeight={500}>
-              Runbuddy
+              Horiseon
             </Heading>
-            <Link href="https://github.com/Steph-ohara/run-buddy" isExternal>
-            <FaGithub mx="2px" />Run Buddy
+            <Link href="https://github.com/Steph-ohara/Horiseon" isExternal>
+            <FaGithub mx="2px" />Horiseon
             </Link>
           </Stack>
         </Box>

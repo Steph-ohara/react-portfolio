@@ -1,24 +1,23 @@
 import {
-    Box,
-    Center,
-    Flex,
-    useColorModeValue,
-    Heading,
-    Link,
-    Text,
-    Stack,
-    Image,
-  } from "@chakra-ui/react";
+  Box,
+  Center,
+  Flex,
+  useColorModeValue,
+  Heading,
+  Link,
+  Text,
+  Stack,
+  Image,
+} from "@chakra-ui/react";
 
-  import { FaGithub } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 
-  
-  const IMAGE =
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAfWfFeIP8dEHdG_o-nfQNaN8i76zMRw-q0g&usqp=CAU";
-  
-  export default function ProductSimple() {
-    return (
-      <Link href="https://steph-ohara.github.io/run-buddy/" >
+const IMAGE =
+  "https://imageio.forbes.com/specials-images/imageserve/61d6376afb41b047d0299df8/Video-Gamer-Mouse--Keyboard--Headphones-and-Controller/1960x0.jpg?fit=bounds&format=jpg&width=960";
+
+export default function ProductSimple() {
+  return (
+    <Link href="http://game-central3.herokuapp.com/">
       <Flex py={12}>
         <Box
           position={"relative"}
@@ -65,15 +64,14 @@ import {
           </Box>
           <Stack pt={10} align={"center"}>
             <Heading fontSize={"2xl"} fontFamily={"body"} fontWeight={500}>
-              Runbuddy
+              Game Central
             </Heading>
-            <Link href="https://github.com/Steph-ohara/run-buddy" isExternal>
-            <FaGithub mx="2px" />Run Buddy
+            <Link href="https://github.com/Alopez844/vg-search-engine-" isExternal>
+            <FaGithub mx="2px" />Game Central 
             </Link>
           </Stack>
         </Box>
       </Flex>
-      </Link>
-    );
-  }
-  
+    </Link>
+  );
+}

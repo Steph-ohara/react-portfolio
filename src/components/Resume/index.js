@@ -1,41 +1,56 @@
-import React from 'react'
+import {
+  Flex,
+  Heading,
+  Spacer,
+  Text,
+  VStack,
+  HStack,
+  Box,
+  Container,
+} from "@chakra-ui/react";
+import React from "react";
 
-export default function Resume() {
+import {
+  List,
+  ListItem,
+  ListIcon,
+  OrderedList,
+  UnorderedList,
+} from "@chakra-ui/react";
+
+function index() {
   return (
-    <section class=''>
-        <h1 className='resume'>Resume: Stephanie O'Hara</h1>
-        <hr></hr>
+    <Container p={3}>
+      <Box w="100%" align="center" direction="column">
+        <Heading mb={4} fontSize="4xl">
+          Resume
+        </Heading>
+    </Box>
+    <Box>
+          <Text fontSize="2xl">Front-End Proficiency</Text>
+          <UnorderedList>
+            <ListItem>HTML</ListItem>
+            <ListItem>CSS</ListItem>
+            <ListItem>Javascript</ListItem>
+            <ListItem>jQuery</ListItem>
+            <ListItem>React</ListItem>
+            <ListItem>Bootstrap</ListItem>
+            <ListItem>Chakra UI</ListItem>
+          </UnorderedList>
 
-        <div class='row justify-content-center' id='resume'>
-            <div class='mt-5 pl-5 pr-5'>
-                Full Stack Developer with 6 Months of experince in MERN, HTML, CSS, MySQL, etc. 
-
-                <p class='mt-5'>
-                    <a href='https://www.linkedin.com/in/stephohara/'><img src='https://img.icons8.com/color/48/000000/linkedin-2.png' alt='Stephanie Linkedin'/></a>    
-                </p>  
-            </div>
-        </div>
-
-
-        <div class='justify-content-center mt-5'>
-            <div id='front-back'>
-                <h2>
-                    Front End experince
-                </h2>
-                <p>
-                    HTML, CSS (Bootsrap, Tailwind), JavaScript, jQuery, React.js
-                </p>
-            </div>
-
-            <div id='front-back' class='mt-5'>
-                <h2>
-                    Back End Experience
-                </h2>
-                <p>
-                    Node.js, Express.js, Mysql, Sequelize, NoSQL including MongoDB and Mongoose, API's including thrid party, RESTful and server-side API's, and Handlebars.
-                </p>
-            </div>
-        </div>    
-    </section>
+          <Text fontSize="2xl">Front-End Proficiency</Text>
+          <UnorderedList>
+            <ListItem>APIs</ListItem>
+            <ListItem>Node</ListItem>
+            <ListItem>Express</ListItem>
+            <ListItem>MySQL, Squelize</ListItem>
+            <ListItem>MongoDB, Mongoose</ListItem>
+            <ListItem>REST</ListItem>
+            <ListItem>GraphQL</ListItem>
+          </UnorderedList>
+      </Box>
+    </Container>
   );
 }
+
+export default index;

@@ -9,16 +9,14 @@ import {
     Stack,
     Image,
   } from "@chakra-ui/react";
-
   import { FaGithub } from 'react-icons/fa';
 
-  
   const IMAGE =
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAfWfFeIP8dEHdG_o-nfQNaN8i76zMRw-q0g&usqp=CAU";
+    "https://raw.githubusercontent.com/fondofhats/workday-scheduler/master/workday-scheduler.png";
   
   export default function ProductSimple() {
     return (
-      <Link href="https://steph-ohara.github.io/run-buddy/" >
+      <Link href="https://steph-ohara.github.io/Work-Day-Scheduler/" >
       <Flex py={12}>
         <Box
           position={"relative"}
@@ -65,10 +63,10 @@ import {
           </Box>
           <Stack pt={10} align={"center"}>
             <Heading fontSize={"2xl"} fontFamily={"body"} fontWeight={500}>
-              Runbuddy
+              Work Day Scheduler
             </Heading>
-            <Link href="https://github.com/Steph-ohara/run-buddy" isExternal>
-            <FaGithub mx="2px" />Run Buddy
+            <Link href="https://github.com/Steph-ohara/Work-Day-Scheduler" isExternal>
+            <FaGithub mx="2px" />Work Day Scheduler
             </Link>
           </Stack>
         </Box>

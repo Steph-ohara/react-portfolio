@@ -6,10 +6,12 @@ import {
   Spacer,
   Text,
   useColorModeValue,
+  useBreakpointValue,
   VisuallyHidden,
 } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { ReactNode } from 'react';
+
 
 const SocialButton = ({
   children,
@@ -49,26 +51,34 @@ const SocialButton = ({
   );
 };
 
-export default function SmallWithSocial() {
+export default function SmallWithNavigation() {
   return (
-    <Box
+    <div style={{
+      position: "fixed",
+      left: 0,
+      bottom: 0,
+      right: 0,
+    }} ><Box
       bg={useColorModeValue('gray.50', 'gray.900')}
       color={useColorModeValue('gray.700', 'gray.200')}>
       <Container
-          as={Stack}
-          maxW={'6xl'}
-          py={4}
-          direction={{ base: 'column', md: 'row' }}
-          spacing={4}>
-        <Stack direction={'row'} spacing="60px" alignItems="center">
+        as={Stack}
+        maxW={'6xl'}
+        py={4}
+        direction={{ base: 'column', md: 'row' }}
+        spacing={4}
+        justify={{ base: 'center', md: 'space-between' }}
+        align={{ base: 'center', md: 'center' }}>
+        <Stack direction={'row'} spacing={10} align={useBreakpointValue({ base: 'center'})}>
           <SocialButton label={'Github'} href={'https://github.com/Steph-ohara'}>
             <FaGithub size={100} />
           </SocialButton>
           <SocialButton label={'LinkedIn'} href={'https://www.linkedin.com/in/stephohara/'}>
             <FaLinkedin size={100} />
           </SocialButton>
-        </Stack>
+      </Stack>
       </Container>
     </Box>
+    </div>
   );
 }
